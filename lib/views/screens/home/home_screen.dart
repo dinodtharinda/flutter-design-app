@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_use_of_protected_member
+// ignore_for_file: invalid_use_of_protected_member, avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:flutter_design_app/utils/custom/app_custom_widgets.dart';

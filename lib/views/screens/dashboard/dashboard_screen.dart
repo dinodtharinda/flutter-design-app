@@ -28,7 +28,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
         index: pageIndex,
         children: const [
           HomeScreen(),
-          MapScreen()
+          MapScreen(),
+          HomeScreen(),
+          HomeScreen(),
+          HomeScreen(),
+
+
         ],
       ),
       bottomNavigationBar: BottomAppBar(
@@ -41,7 +46,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
           padding: const EdgeInsets.all(Dime.PADDING_SIZE_EXTRA_SMALL),
           child: Row(children: [
             BottomNavItem(
-            
                 iconData: Icons.home,
                 isSelected: pageIndex == 0,
                 onTap: () {
@@ -70,7 +74,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   _setPage(3);
                 }),
             BottomNavItem(
-                iconData: Icons.menu,
+                iconData: Icons.person,
                 isSelected: pageIndex == 4,
                 onTap: () {
                   print("Index 1");

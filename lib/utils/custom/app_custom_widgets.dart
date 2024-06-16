@@ -820,7 +820,7 @@ class _CustomSliderState extends State<CustomSlider> {
   int _index = 0;
   final CarouselController _carouselController = CarouselController();
 
-  bool _isSelected = false;
+   final bool _isSelected = false;
   @override
   Widget build(BuildContext context) {
     final _items = widget.items;
@@ -978,7 +978,7 @@ class AlphaProductCard extends StatelessWidget {
       width: Dime.SCREEN_WIDTH(context) * 0.55,
       height: Dime.SCREEN_WIDTH(context) * 0.5,
       child: Column(children: [
-        Container(
+        SizedBox(
           width: double.infinity,
           height: Dime.SCREEN_WIDTH(context) * 0.25,
           child: CustomImage(

@@ -1,6 +1,7 @@
-// ignore_for_file: avoid_print, no_leading_underscores_for_local_identifiers
+
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
-import 'package:flutter_design_app/controllers/auth_controller.dart';
 
 import 'package:flutter_design_app/utils/custom/app_custom_widgets.dart';
 import 'package:flutter_design_app/views/screens/dashboard/dashboard_screen.dart';
@@ -48,30 +49,30 @@ class SignInScreen extends StatelessWidget {
     );
   }
 
-  void _login(AuthController authController, TextEditingController emailCtlr,
-      TextEditingController passCtlr, BuildContext context) async {
-    String _email = emailCtlr.text.trim();
-    String _password = passCtlr.text.trim();
+  // void _login(AuthController authController, TextEditingController emailCtlr,
+  //     TextEditingController passCtlr, BuildContext context) async {
+  //   String _email = emailCtlr.text.trim();
+  //   String _password = passCtlr.text.trim();
 
-    bool _isValid = emailCtlr.text.contains("@");
+  //   bool _isValid = emailCtlr.text.contains("@");
 
-    if (_email.isEmpty) {
-      print('enter_email');
-    } else if (!_isValid) {
-      print('invalid_email');
-    } else if (_password.isEmpty) {
-      print('enter_password');
-    } else if (_password.length < 6) {
-      print('password_should_be');
-    } else {
-      // print(_email);
-      // authController.login(_email, _password).then((status) async {
-      //   if (status.isSuccess) {
-      //     print(status.message);
-      //   } else {
-      //     print(status.message);
-      //   }
-      // });
-    }
-  }
+  //   if (_email.isEmpty) {
+  //     print('enter_email');
+  //   } else if (!_isValid) {
+  //     print('invalid_email');
+  //   } else if (_password.isEmpty) {
+  //     print('enter_password');
+  //   } else if (_password.length < 6) {
+  //     print('password_should_be');
+  //   } else {
+  //     // print(_email);
+  //     // authController.login(_email, _password).then((status) async {
+  //     //   if (status.isSuccess) {
+  //     //     print(status.message);
+  //     //   } else {
+  //     //     print(status.message);
+  //     //   }
+  //     // });
+  //   }
+  // }
 }

@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter_design_app/utils/custom/app_custom_widgets.dart';
@@ -12,43 +14,43 @@ class MapScreen extends StatefulWidget {
 
 class _MapScreenState extends State<MapScreen> {
   GoogleMapController? mapController;
-  final Set<Marker> _markers = Set.of([]);
+  final Set<Marker> _markers = {};
   @override
   Widget build(BuildContext context) {
     void addMarker(LatLng location) {
-    const MarkerId markerId = MarkerId('1');
-    final Marker marker = Marker(
-      markerId: markerId,
-      position: location,
-      infoWindow: const InfoWindow(
-        title: 'Marker Title',
-        snippet: 'Marker Snippet',
-      ),
-      onTap: () {
-        // Handle marker tap events here
-        print('Marker Tapped');
-      },
-    );
+      const MarkerId markerId = MarkerId('1');
+      final Marker marker = Marker(
+        markerId: markerId,
+        position: location,
+        infoWindow: const InfoWindow(
+          title: 'Marker Title',
+          snippet: 'Marker Snippet',
+        ),
+        onTap: () {
+          // Handle marker tap events here
+          print('Marker Tapped');
+        },
+      );
 
-    setState(() {
-      _markers.add(marker);
-    });
-  }
+      setState(() {
+        _markers.add(marker);
+      });
+    }
+
     return Scaffold(
-        appBar: CustomAppBar(),
+        appBar: const CustomAppBar(),
         body: Stack(
           alignment: Alignment.bottomCenter,
           children: [
             GoogleMap(
               onTap: (location) {
-                 _markers.clear();
-         
-          addMarker(location);
+                _markers.clear();
+
+                addMarker(location);
               },
               onMapCreated: (controller) {
                 setState(() {
                   mapController = controller;
-                 
                 });
               },
               initialCameraPosition: const CameraPosition(
@@ -64,7 +66,6 @@ class _MapScreenState extends State<MapScreen> {
               title: "Select Place",
               onTap: () {
                 print("Select Place");
-                 
               },
             ),
           ],

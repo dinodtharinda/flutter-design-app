@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import '../../utils/constant/app_constants.dart';
 import '../model/response/response_model.dart';
