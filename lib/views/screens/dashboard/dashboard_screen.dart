@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_design_app/utils/custom/app_custom_widgets.dart';
 import 'package:flutter_design_app/views/screens/home/home_screen.dart';
 import 'package:flutter_design_app/views/screens/map/map_screen.dart';
+import 'package:flutter_design_app/views/screens/profile/profile_screen.dart';
 import '../../../../utils/constant/dimensions.dart';
 
 class DashboardScreen extends StatefulWidget {
@@ -26,12 +27,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return Scaffold(
       body: IndexedStack(
         index: pageIndex,
-        children: const [
+        children:  const [
           HomeScreen(),
           MapScreen(),
           HomeScreen(),
           HomeScreen(),
-          HomeScreen(),
+          ProfileScreen(),
 
 
         ],

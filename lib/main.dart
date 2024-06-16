@@ -4,6 +4,7 @@ import 'package:flutter_design_app/data/repository/question_repo.dart';
 import 'package:flutter_design_app/utils/themes/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_design_app/views/screens/auth/sign_in_screen.dart';
+import 'package:flutter_design_app/views/screens/profile/profile_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'controllers/auth_controller.dart';
@@ -46,7 +47,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: Provider.of<AppThemes>(context).currentTheme,
-        home:const  SignInScreen(),
+        home:const SignInScreen(),
        );
   }
 }

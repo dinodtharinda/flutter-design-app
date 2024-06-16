@@ -22,10 +22,29 @@ TextStyle textStyleSmall(BuildContext context) {
   );
 }
 
+
+TextStyle textStyleSmallBold(BuildContext context) {
+  return TextStyle(
+    fontFamily: "Roboto",
+    fontWeight: Dime.FONT_WEIGHT_LARGE,
+    fontSize: Dime.R_FONT_SIZE_SMALL(context),
+    
+  );
+}
+
 TextStyle textStyleLarge(BuildContext context) {
   return TextStyle(
     fontFamily: "Roboto",
     fontWeight: Dime.FONT_WEIGHT_DEFAULT,
+    fontSize: Dime.R_FONT_SIZE_LARGE(context),
+    
+  );
+}
+
+TextStyle textStyleLargeBold(BuildContext context) {
+  return TextStyle(
+    fontFamily: "Roboto",
+    fontWeight: Dime.FONT_WEIGHT_LARGE,
     fontSize: Dime.R_FONT_SIZE_LARGE(context),
     
   );
