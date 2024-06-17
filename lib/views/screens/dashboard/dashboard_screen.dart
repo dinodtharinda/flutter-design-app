@@ -29,12 +29,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
         index: pageIndex,
         children:  const [
           HomeScreen(),
-          MapScreen(),
           HomeScreen(),
           HomeScreen(),
           ProfileScreen(),
-
-
+          ProfileScreen(),
         ],
       ),
       bottomNavigationBar: BottomAppBar(
@@ -54,7 +52,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   _setPage(0);
                 }),
             BottomNavItem(
-                iconData: Icons.map,
+                iconData: Icons.data_object,
                 isSelected: pageIndex == 1,
                 onTap: () {
                   print("Index 1");
